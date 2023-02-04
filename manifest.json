@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions of the world!",
+    "name": "Hello Extensions",
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
