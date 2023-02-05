@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "ChatGPT Read Time",
+    "description": "This extension adds a read time for every ChatGPT answer.",
     "version": "1.0",
     "icons": {
       "16": "img/icon-16.png",
@@ -13,10 +13,7 @@
       {
         "js": ["scripts/content.js"],
         "matches": [
-          "https://developer.chrome.com/docs/extensions/*",
-          "https://developer.chrome.com/docs/webstore/*",
-          "https://developer.chrome.com/docs/workbox/*",
-          "https://developer.chrome.com/docs/devtools/*"
+          "https://chat.openai.com/chat"
         ]
       }
     ]
