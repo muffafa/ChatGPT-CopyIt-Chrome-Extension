@@ -1,25 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT Read Time",
-  "description": "This extension adds a read time for every ChatGPT answer.",
+  "name": "ChatGPT CopyIt",
   "version": "1.0",
-  "icons": {
-    "16": "img/icon-16.png",
-    "32": "img/icon-32.png",
-    "48": "img/icon-48.png",
-    "128": "img/icon-128.png"
-  },
+  "description": "ChatGPT CopyIt is a Chrome extension that allows you to copy to evrey ChatGPT answer. It adds a copy to clipboard button of each paragraph.",
   "content_scripts": [
     {
       "js": [
         "scripts/content.js"
       ],
       "matches": [
-        "https://chat.openai.com/chat"
+        "*://*.openai.com/chat*"
       ]
     }
   ],
-  "permissions": [
-    "activeTab"
-  ]
+  "icons": {
+    "16": "img/icon-16.png",
+    "32": "img/icon-32.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  }
 }
