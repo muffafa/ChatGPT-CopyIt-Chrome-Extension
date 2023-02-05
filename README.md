@@ -1,1 +1,2 @@
-# ChatGptQuestionTemplate
+# ChatGPT-CopyIt-Chrome-Extension
+
