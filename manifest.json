@@ -5,11 +5,14 @@
   "description": "ChatGPT CopyIt is a Chrome extension that allows you to copy to evrey ChatGPT answer. It adds a copy to clipboard button of each paragraph.",
   "content_scripts": [
     {
+      "matches": [
+        "*://*.openai.com/chat*"
+      ],
       "js": [
         "scripts/content.js"
       ],
-      "matches": [
-        "*://*.openai.com/chat*"
+      "css": [
+        "styles/main.css"
       ]
     }
   ],
