@@ -15,7 +15,7 @@ const observer = new MutationObserver((mutations) => {
         const lastPElement = childPElements[childPElements.length - 1]; // get the last paragraph
         if (!lastPElement.querySelector("button")) { // check if the button is not already added
           const copyButton = document.createElement("button");
-          copyButton.textContent = "Copy";
+          copyButton.textContent = "+";
           copyButton.style.backgroundColor = "lightgray";
           copyButton.style.color = "white";
           copyButton.style.padding = "5px 10px";
@@ -31,13 +31,11 @@ const observer = new MutationObserver((mutations) => {
             copyButton.textContent = "Copied!";
             copyButton.style.backgroundColor = "green";
             setTimeout(() => {
-              copyButton.textContent = "Copy";
+              copyButton.textContent = "+";
               copyButton.style.backgroundColor = "lightgray";
             }, 3000);
           });
-          const copyButtonContainer = document.createElement("span");
-          copyButtonContainer.appendChild(copyButton);
-          lastPElement.appendChild(copyButtonContainer);
+          lastPElement.appendChild(copyButton);
         }
       });
     }
