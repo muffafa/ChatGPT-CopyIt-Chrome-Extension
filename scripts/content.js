@@ -12,22 +12,22 @@ const observer = new MutationObserver((mutations) => {
             }
             filteredElements.forEach((filteredElement) => {
                 const childPElements = filteredElement.getElementsByTagName("p");
-                for (let i = 0; i < childPElements.length; i++) {
-                    if (!childPElements[i].querySelector("button")) {
-                        const copyButton = document.createElement("button");
-                        copyButton.textContent = "+";
-                        copyButton.style.backgroundColor = "lightgray";
-                        copyButton.style.color = "white";
-                        copyButton.style.padding = "5px 10px";
-                        copyButton.style.marginLeft = "8px";
-                        copyButton.style.borderRadius = "5px";
-                        copyButton.style.cursor = "pointer";
-                        copyButton.addEventListener("click", () => {
-                            navigator.clipboard.writeText(childPElements[i].textContent);
-                        });
-                        childPElements[i].appendChild(copyButton);
-                        
-                    }
+                const lastPElement = childPElements[childPElements.length - 1]; // get the last paragraph
+                if (!lastPElement.querySelector("button")) { // check if the button is not already added
+                    const copyButton = document.createElement("button");
+                    copyButton.textContent = "+";
+                    copyButton.style.backgroundColor = "lightgray";
+                    copyButton.style.color = "white";
+                    copyButton.style.padding = "5px 10px";
+                    copyButton.style.marginLeft = "8px";
+                    copyButton.style.borderRadius = "5px";
+                    copyButton.style.cursor = "pointer";
+                    copyButton.addEventListener("click", () => {
+                        const paragraphs = filteredElement.getElementsByTagName("p");
+                        const textContent = Array.from(paragraphs).map((p) => p.textContent).join("\n\n");
+                        navigator.clipboard.writeText(textContent);
+                    });
+                    lastPElement.appendChild(copyButton);
                 }
             });
         }
