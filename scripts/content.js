@@ -4,12 +4,12 @@ window.addEventListener('load', () => {
 
     newChatLoadObserver();
     function newChatLoadObserver() {
-        waitForElement('nav a, form textarea', ()=>{
+        waitForElement('nav a, form textarea', () => {
             const navElements = document.querySelectorAll('nav > div a, nav a:nth-child(1)');
-            navElements.forEach((navEl)=>{
+            navElements.forEach((navEl) => {
                 navEl.addEventListener('click', async () => {
                     await new Promise(r => setTimeout(r, 250));
-                    waitForElement('.text-base, main h1', ()=> {
+                    waitForElement('.text-base, main h1', () => {
                         if (document.querySelector('.text-base')) {
                             console.log('existing chat loaded');
                             newChatLoaded();
@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
         });
     }
 
-    setInterval(()=>{
+    setInterval(() => {
         newChatLoaded();
     }, 1000);
 
@@ -51,9 +51,9 @@ window.addEventListener('load', () => {
         answers.forEach((resultElement, i) => {
             actionUpdates(resultElement, i);
             resultElement.addEventListener("DOMSubtreeModified", () => {
-              actionUpdates(resultElement, i);
+                actionUpdates(resultElement, i);
             });
-          });
+        });
     }
 
     function actionUpdates(resultElement, i) {
@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
     }
 
     function actionContainer(answer, i) {
-        if (document.querySelector(`#action-buttons-${i}`)) return;  
+        if (document.querySelector(`#action-buttons-${i}`)) return;
         let actionContainer = Object.assign(document.createElement('div'), {
             id: `action-buttons-${i}`,
             className: 'gpt-copyit gptc-actions'
@@ -89,10 +89,10 @@ window.addEventListener('load', () => {
             const actionWrapper = document.querySelector(`#action-buttons-${index}`);
             actionWrapper.appendChild(counterElement);
         }
-    } 
+    }
 
     function addCopyButtonToResult(answer, index) {
-        if (document.querySelector(`#result-copy-button-${index}`)) return; 
+        if (document.querySelector(`#result-copy-button-${index}`)) return;
         const actionWrapper = document.querySelector(`#action-buttons-${index}`);
 
         const actionButtonWrapper = Object.assign(document.createElement('div'), {
