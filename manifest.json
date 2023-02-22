@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT CopyIt",
-  "version": "1.0",
+  "version": "0.0.0.1",
   "description": "ChatGPT CopyIt is a Chrome extension that allows you to copy to evrey ChatGPT answer. It adds a copy to clipboard button end of each answer. Also it shows word and character counter.",
   "content_scripts": [
     {
