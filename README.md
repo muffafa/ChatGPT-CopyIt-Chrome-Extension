@@ -4,6 +4,9 @@ This Chrome extension adds a "Copy" button to the end of each answer in OpenAI's
 
 <div align="center">
   <h1>ChatGPT CopyIt Chrome Extension</h1>
+  <a class="header-badge" target="_blank" href="https://chrome.google.com/webstore/detail/chatgpt-copyit/ogakgacjkoojmdahpelppalilhhplnbe">
+    <img src="https://img.shields.io/badge/Chrome%20Web%20%20Store-download-green">
+  </a>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/muffafa/">
     <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
