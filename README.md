@@ -1,4 +1,4 @@
-[# ChatGPT CopyIt Chrome Extension](https://chrome.google.com/webstore/detail/chatgpt-copyit/ogakgacjkoojmdahpelppalilhhplnbe?hl=en&authuser=0)
+#[ChatGPT CopyIt Chrome Extension](https://chrome.google.com/webstore/detail/chatgpt-copyit/ogakgacjkoojmdahpelppalilhhplnbe?hl=en&authuser=0)
 
 This Chrome extension adds a "Copy" button to the end of each answer in OpenAI's chat interface. It also shows the number of characters and words in each answer.
 
