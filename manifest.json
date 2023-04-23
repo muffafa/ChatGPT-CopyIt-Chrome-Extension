@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.openai.com/chat*"
+        "https://chat.openai.com/*"
       ],
       "js": [
         "scripts/content.js"
