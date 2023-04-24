@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ChatGPT CopyIt",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "description": "ChatGPT CopyIt adds a copy to clipboard button end of each answer. Also it shows word and character counter.",
   "content_scripts": [
     {
